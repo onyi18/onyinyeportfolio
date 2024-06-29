@@ -15,8 +15,8 @@
             border: 12px solid #ffffff;
             display: flex;
             align-items: center;
-            background: url('/img/bg.jpg') no-repeat center center;
-            background-size: 99% 120%;
+            background: url('img/bg.jpg') no-repeat center center;
+            background-size: cover;
             font-family: "Space Grotesk";
             /* place-content: center; */
         }
@@ -77,10 +77,65 @@
             position: absolute;
             right: 0;
         }
+
+        .panel {
+            z-index: 10; margin-left: -20px;
+        }
+        @media (min-width: 700px) and (max-width: 1000px) {
+            body {
+            border: 8px solid #ffffff !important;
+     
+            }
+            .container {
+            width: 100vw;
+            max-width: 70%;
+            z-index: 1;
+            margin-left: 100px;
+        }
+        .whitePanel {
+            position: absolute;
+            right: -16;
+        }
+        .panel {
+            z-index: 10; margin-left: -20px;
+        }
+
+        }
+
+        @media (min-width: 300px) and (max-width: 690px) {
+            body {
+            border: 8px solid #ffffff !important;
+   
+            }
+
+            .container {
+            width: 100vw;
+            max-width: 70%;
+            z-index: 1;
+            margin-left: 20px;
+        }
+
+        h1 {
+   
+            font-size: 72px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 80px; 
+            letter-spacing: -4px;
+        }
+        .whitePanel {
+            position: absolute;
+            right: -12;
+        }
+        .panel {
+            z-index: 10; margin-left: -20px;
+        }
+
+        }
     </style>
 </head>
 <body>
-    <img src="img/Panel.svg" alt="" style="z-index: 10; margin-left: -10px;">
+    <img src="img/Panel.svg" alt="" class="panel">
     <img src="img/whitePanel.svg" class="whitePanel" style="z-index: 10; margin-left: -10px;">
     <div class="container">
         <Span>Welcome to</Span>
